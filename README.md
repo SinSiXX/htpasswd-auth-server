@@ -21,11 +21,11 @@ If you install them into a folder named `lua_modules`, then the script
 `bin/htpasswd-auth-server` will use (and *only* use) modules found under that
 folder. For example, after cloning you could run:
 
-```
-luarocks install --tree lua_modules luaposix
-luarocks install --tree lua_modules etlua
-luarocks install --tree lua_modules luafilesystem
-luarocks install --tree lua_modules lbase64
+```bash
+$ luarocks install --tree lua_modules luaposix
+$ luarocks install --tree lua_modules etlua
+$ luarocks install --tree lua_modules luafilesystem
+$ luarocks install --tree lua_modules lbase64
 ```
 
 Make a copy of `etc/config.lua.example` to `etc/config.lua` and edit
