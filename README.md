@@ -35,7 +35,10 @@ By default, all temp files, compiled config files, etc are placed at
 `$HOME/.htpasswd-auth-server` - this can be changed by setting the `work_dir`
 variable in `etc/config.lua`
 
-Additionally, you'll need to create an htpasswd file at `etc/htpasswd`.
+You can also use `bin/htpasswd-auth-server` to edit/update the htpasswd file.
+Just run `bin/htpasswd-auth-server add` and you'll be prompted to enter a
+username and password.
+
 
 ## License
 
