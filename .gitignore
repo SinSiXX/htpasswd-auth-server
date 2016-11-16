@@ -1,3 +1,4 @@
 /etc/config.lua
 /etc/htpasswd
 /lua_modules
+/.lua-version
