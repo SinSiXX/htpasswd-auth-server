@@ -22,10 +22,10 @@ If you install them into a folder named `lua_modules`, then the script
 folder. For example, after cloning you could run:
 
 ```bash
-luarocks install --tree lua_modules install luaposix
-luarocks install --tree lua_modules install etlua
-luarocks install --tree lua_modules install luafilesystem
-luarocks install --tree lua_modules install lbase64
+luarocks --tree lua_modules install luaposix
+luarocks --tree lua_modules install etlua
+luarocks --tree lua_modules install luafilesystem
+luarocks --tree lua_modules install lbase64
 ```
 
 Make a copy of `etc/config.lua.example` to `etc/config.lua` and edit
