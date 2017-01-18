@@ -39,6 +39,16 @@ You can also use `bin/htpasswd-auth-server` to edit/update the htpasswd file.
 Just run `bin/htpasswd-auth-server add` and you'll be prompted to enter a
 username and password.
 
+To run as a service, there's an example systemd unit file at
+`misc/ldap-auth-server.service`:
+
+```bash
+sudo cp misc/htpasswd-auth-server.service /etc/systemd/system/htpasswd-auth-server.service
+# edit /etc/systemd/system/htpasswd-auth-server.service as needed
+sudo systemctl daemon-reload
+sudo systemctl enable htpasswd-auth-server.service
+sudo systemctl start htpasswd-auth-server.service
+```
 
 ## License
 
@@ -47,3 +57,5 @@ Released under an MIT-style license. See the file `LICENSE` for details.
 This contains a copy of md5.lua from https://github.com/kikito/md5.lua (as
 `lib/md5.lua`) - this is also MIT-licensed. A copy of the license can
 be found in `lib/md5.lua`
+
+
