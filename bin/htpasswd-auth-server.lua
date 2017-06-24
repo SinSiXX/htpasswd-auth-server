@@ -11,7 +11,6 @@ local string_len = string.len
 local install_dir = posix.dirname(posix.dirname(posix.realpath(arg[0])))
 package.path = './lib/?.lua;' .. package.path
 
-local apr1 = require'apr1'
 
 posix.chdir(install_dir)
 
@@ -59,6 +58,8 @@ end
 config.install_dir = install_dir
 
 if (arg[1] == "add") then
+  local apr1 = require'apr1'
+  local lecho = require'lecho'
   local htpassword = {}
 
   local f = io.open(install_dir .. "/etc/htpasswd","r")
@@ -76,13 +77,13 @@ if (arg[1] == "add") then
   io.write('Enter username: ')
   username = io.read('*line')
   io.write('Enter password: ')
-  os.execute('stty -echo')
+  lecho:off()
   password = io.read('*line')
-  os.execute('stty echo')
+  lecho:on()
   io.write('\nConfirm password: ')
-  os.execute('stty -echo')
+  lecho:off()
   cpassword = io.read('*line')
-  os.execute('stty echo')
+  lecho:on()
   io.write('\n')
 
   if(password == cpassword) then
