@@ -10,6 +10,7 @@ It requires any version of nginx, Lua, and the following lua modules:
 * etlua
 * luafilesystem
 * lbase64
+* lecho
 
 ## install + use
 
@@ -26,6 +27,7 @@ luarocks --tree lua_modules install luaposix
 luarocks --tree lua_modules install etlua
 luarocks --tree lua_modules install luafilesystem
 luarocks --tree lua_modules install lbase64
+luarocks --tree lua_modules install lecho
 ```
 
 Make a copy of `etc/config.lua.example` to `etc/config.lua` and edit
